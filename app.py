@@ -7,10 +7,8 @@ import os
 
 app = Flask(__name__)
 
-# Load the trained model
 model = pickle.load(open("house_price_model.pkl", "rb"))
 
-# Input features expected in form
 FEATURES = ['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude']
 
 @app.route('/')
